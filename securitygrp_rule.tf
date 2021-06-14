@@ -10,10 +10,10 @@ resource "oci_core_network_security_group_security_rule" "web_security_Ingress_r
   for_each = toset(var.service_ports)
   #Required
   network_security_group_id = oci_core_network_security_group.web_security_group.id
-  direction                 = "InGRESS"
+  direction                 = "INGRESS"
   protocol                  = "6"
   source                    = "0.0.0.0/0"
-  source_type          = "CIDR_BLOCK"
+  source_type               = "CIDR_BLOCK"
   tcp_options {
 
     #Optional
@@ -37,10 +37,10 @@ resource "oci_core_network_security_group_security_rule" "ssh_security_Ingress_r
   for_each = toset(var.bastion_ports)
   #Required
   network_security_group_id = oci_core_network_security_group.ssh_security_group.id
-  direction                 = "InGRESS"
+  direction                 = "INGRESS"
   protocol                  = "6"
   source                    = "0.0.0.0/0"
-  source_type          = "CIDR_BLOCK"
+  source_type               = "CIDR_BLOCK"
   tcp_options {
 
     #Optional
