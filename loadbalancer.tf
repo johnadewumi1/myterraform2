@@ -1,9 +1,9 @@
 resource "oci_load_balancer" "johnlb" {
-  shape          = var.load_balancer_shape
-  compartment_id = var.compartment_id
-  subnet_ids     = [oci_core_subnet.lbsubnet.id]
-  display_name   = "johnlb"
-  network_security_group_ids = [oci_core_network_security_group" "web_security_group.id]
+  shape                      = var.load_balancer_shape
+  compartment_id             = var.compartment_id
+  subnet_ids                 = [oci_core_subnet.lbsubnet.id]
+  display_name               = "johnlb"
+  network_security_group_ids = [oci_core_network_security_group.web_security_group.id]
 }
 
 resource "oci_load_balancer_listener" "johnlbs_listener" {

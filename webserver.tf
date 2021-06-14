@@ -17,7 +17,7 @@ resource "oci_core_instance" "johnserver" {
   create_vnic_details {
     subnet_id        = oci_core_subnet.privatesubnet.id
     assign_public_ip = false
-    nsg_ids = [oci_core_network_security_group.web_security_group.id]
+    nsg_ids          = [oci_core_network_security_group.web_security_group.id]
   }
 }
 

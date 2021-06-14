@@ -17,7 +17,7 @@ resource "oci_core_instance" "bastionserver" {
   create_vnic_details {
     subnet_id        = oci_core_subnet.bastionsubnet.id
     assign_public_ip = true
-    nsg_ids = [oci_core_network_security_group.ssh_security_group.id]
+    nsg_ids          = [oci_core_network_security_group.ssh_security_group.id]
   }
 }
 
