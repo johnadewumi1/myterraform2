@@ -33,11 +33,11 @@ variable "cidr_block" {
 }
 
 variable "service_ports" {
-  default = [80, 443]
+  default = ["80", "443"]
 }
 
 variable "bastion_ports" {
-  default = [22]
+  default = ["22"]
 }
 
 variable "ADs" {
