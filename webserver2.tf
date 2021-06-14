@@ -17,7 +17,7 @@ resource "oci_core_instance" "johnserver2" {
   }
   create_vnic_details {
     subnet_id        = oci_core_subnet.privatesubnet.id
-    assign_public_ip = true
+    assign_public_ip = false
   }
 }
 
@@ -32,8 +32,8 @@ data "oci_core_vnic" "johnwebser2_vnic" {
   vnic_id = data.oci_core_vnic_attachments.john_vnic_attach2.vnic_attachments.0.vnic_id
 }
 
-output "webPublicIp2" {
+output "webPrivateIp2" {
   //  value = oci_core_instance.web.public_ip
-  value = [data.oci_core_vnic.johnwebser2_vnic.public_ip_address]
+  value = [data.oci_core_vnic.johnwebser2_vnic.private_ip_address]
 
 }
