@@ -31,7 +31,7 @@ data "oci_core_vnic" "johnwebser_vnic" {
   vnic_id = data.oci_core_vnic_attachments.john_vnic_attach.vnic_attachments.0.vnic_id
 }
 
-output "webPrivateIp" {
-  //  value = oci_core_instance.web.public_ip
-  value = [data.oci_core_vnic.johnwebser_vnic.private_ip_address]
-}
+# output "webPrivateIp" {
+#   //  value = oci_core_instance.web.public_ip
+#   value = [data.oci_core_vnic.johnwebser_vnic.private_ip_address]
+# }
