@@ -1,5 +1,5 @@
 resource "oci_core_subnet" "privatesubnet" {
-  cidr_block        = var.cidr_block[1]
+  cidr_block        = var.cidr_block[0]
   display_name      = "privatesubnet"
   compartment_id    = var.compartment_id
   vcn_id            = oci_core_vcn.johnvcn.id
