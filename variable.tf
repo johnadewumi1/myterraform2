@@ -29,15 +29,15 @@ variable "VCN-CIDR" {
 }
 
 variable "cidr_block" {
-    default = ["10.0.1.0/24","10.0.2.0/24","10.0.3.0/24"]
+  default = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
 }
 
 variable "service_ports" {
-  default = [80,443]
+  default = [80, 443]
 }
 
 variable "bastion" {
-    default = [22]
+  default = [22]
 }
 
 variable "ADs" {
