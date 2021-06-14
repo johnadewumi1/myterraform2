@@ -12,8 +12,8 @@ resource "oci_core_network_security_group_security_rule" "web_security_Ingress_r
   network_security_group_id = oci_core_network_security_group.web_security_group.id
   direction                 = "InGRESS"
   protocol                  = "6"
-  destination               = "0.0.0.0/0"
-  destination_type          = "CIDR_BLOCK"
+  source                    = "0.0.0.0/0"
+  source_type          = "CIDR_BLOCK"
   tcp_options {
 
     #Optional
@@ -39,8 +39,8 @@ resource "oci_core_network_security_group_security_rule" "ssh_security_Ingress_r
   network_security_group_id = oci_core_network_security_group.ssh_security_group.id
   direction                 = "InGRESS"
   protocol                  = "6"
-  destination               = "0.0.0.0/0"
-  destination_type          = "CIDR_BLOCK"
+  source                    = "0.0.0.0/0"
+  source_type          = "CIDR_BLOCK"
   tcp_options {
 
     #Optional
