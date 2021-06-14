@@ -34,5 +34,4 @@ data "oci_core_vnic" "johnwebser2_vnic" {
 output "webPublicIp2" {
   //  value = oci_core_instance.web.public_ip
   value = [data.oci_core_vnic.johnwebser2_vnic.public_ip_address]
-
 }

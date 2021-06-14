@@ -34,5 +34,4 @@ data "oci_core_vnic" "bastionserver_vnic" {
 output "webPublicIpbastion" {
   //  value = oci_core_instance.web.public_ip
   value = [data.oci_core_vnic.bastionserver_vnic.public_ip_address]
-
 }
