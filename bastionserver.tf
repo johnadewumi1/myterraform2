@@ -31,7 +31,7 @@ data "oci_core_vnic" "bastionserver_vnic" {
   vnic_id = data.oci_core_vnic_attachments.bastionserver_attach.vnic_attachments.0.vnic_id
 }
 
-output "webPublicIp" {
+output "webPublicIpbastion" {
   //  value = oci_core_instance.web.public_ip
   value = [data.oci_core_vnic.bastionserver_vnic.public_ip_address]
 
