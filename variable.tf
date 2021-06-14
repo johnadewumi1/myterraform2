@@ -36,7 +36,7 @@ variable "service_ports" {
   default = [80, 443]
 }
 
-variable "bastion" {
+variable "bastion_ports" {
   default = [22]
 }
 

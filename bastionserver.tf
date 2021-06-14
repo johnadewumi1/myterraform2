@@ -20,7 +20,7 @@ resource "oci_core_instance" "bastionserver" {
   }
 }
 
-data "oci_core_vnic_attachments" "bastionvnic_attach" {
+data "oci_core_vnic_attachments" "bastionserver_attach" {
   compartment_id = var.compartment_id
   # availability_domain = data.template_file.ad_names.*.rendered[0]
   availability_domain = var.ADs[0]
